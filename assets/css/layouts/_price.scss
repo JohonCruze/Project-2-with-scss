@@ -1,0 +1,48 @@
+.price-area {
+    background-color: $gray;
+    .single-price {
+        background-color: #fff;
+        text-align: center;
+        padding: 30px;
+        border: 1px solid #ddd;
+        &.active {
+            border: 5px solid $Primary_color;
+        }
+        span {
+            text-transform: capitalize;
+            font-size: 20px;
+            font-weight: 700;
+        }
+        h4 {
+            font-size: 40px;
+            line-height: 60px;
+            text-transform: capitalize;
+            font-weight: 800;
+        }
+        ul {
+            margin-bottom: 10px;
+            li {
+                font-size: 16px;
+                display: block;
+                line-height: 30px;
+                text-transform: capitalize;
+                font-weight: 400;
+                margin-bottom: 5px;
+                padding-bottom: 5px;
+                border-bottom: 1px solid #f2f2f2;
+                &:last-child {
+                    border-bottom: 0;
+                    padding-bottom: 0;
+                    margin-bottom: 0;
+                }
+            }
+        }
+        a {
+            text-transform: capitalize;
+            font-size: 16px;
+            font-weight: 500;
+            margin-top: 10px;
+            transition: 0.3s;
+        }
+    }
+}

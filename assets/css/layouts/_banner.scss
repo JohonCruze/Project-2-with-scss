@@ -1,0 +1,23 @@
+.banner-area {
+    height: 100vh;
+    z-index: 2;
+    .banner-content {
+        h1 {
+            font-size: 80px;
+            font-weight: 700;
+            text-transform: capitalize;
+            color: $white;
+            line-height: 100px;
+        }
+        h4 {
+            font-size: 25px;
+            color: $white;
+            text-transform: capitalize;
+        }
+        a {
+            margin: 30px 5px 0 5px;
+            transition: .3s;
+        }
+
+    }
+}

@@ -1,0 +1,27 @@
+    .about-content {
+        h2 {
+            font-size: 60px;
+            text-transform: capitalize;
+            font-weight: 800;
+            line-height: 80px;
+            color: $heading_color;
+        }
+        h4 {
+            font-size: 20px;
+            text-transform: uppercase;
+            font-weight: 500;
+        }
+        
+        ul {
+            li {
+                text-transform: capitalize;
+                font-size: 16px;
+                margin-bottom: 10px;
+                i {
+                    color: $Primary_color;
+                    margin-right: 5px;
+                }
+            }
+        }
+        
+    }

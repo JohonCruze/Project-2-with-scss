@@ -1,0 +1,111 @@
+@import "variables";
+
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+.mx-auto {
+  margin: 0 auto;
+}
+
+/*Padding and Margin CSS*/
+@for $i from 1 through 10 {
+  .pt-#{$i * 10} {
+    padding-top: $i * 10px;
+  }
+  .pb-#{$i * 10} {
+    padding-bottom: $i * 10px;
+  }
+  .mt-#{$i * 10} {
+    margin-top: $i * 10px;
+  }
+  .mb-#{$i * 10} {
+    margin-bottom: $i * 10px;
+  }
+}
+
+/*Button CSS*/
+.btn {
+  display: inline-block;
+  color: $white;
+  text-transform: capitalize;
+  font-size: 20px;
+  border-radius: 3px;
+  &.btn-primary {
+    background-color: $btn_background;
+    padding: 10px 30px;
+    &:hover {
+      background-color: $btn_hover;
+    }
+  }
+  &.btn-border {
+    border: 2px solid $btn_background;
+    padding: 8px 30px;
+    &:hover {
+      background-color: $btn_hover;
+      border-color: $btn_hover;
+    }
+  }
+}
+/*Background Image CSS*/
+.bg {
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  z-index: 2;
+  &::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: $black;
+    opacity: 0.75;
+    z-index: -1;
+  }
+}
+
+/* Flex CSS */
+$align: left, center, right;
+@each $i in $align {
+  .text-#{$i} {
+    text-align: $i;
+  }
+}
+$flex: flex, inline-flex;
+@each $i in $flex {
+  .d-#{$i} {
+    display: $i;
+  }
+}
+
+$justify: start, end, center, between, around, evenly;
+@each $i in $justify {
+  .justify-content-#{$i} {
+    justify-content: $i;
+  }
+}
+
+$align-items: start, end, center, baseline, stretch;
+@each $i in $align-items {
+  .align-items-#{$i} {
+    align-items: $i;
+  }
+}

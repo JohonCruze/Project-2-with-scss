@@ -1,0 +1,26 @@
+.service-area {
+    background-color: $bg_gray;
+    .single-service {
+        background-color: #fff;
+        padding: 25px 30px;
+        margin-bottom: 30px;
+        border: 1px solid $gray;
+        &:hover {
+            i {
+                border-radius: 50%;
+            }
+        }
+        i {
+            font-size: 20px;
+            background-color: $Primary_color;
+            color: $white;
+            padding: 20px;
+            transition: .3s;
+        }
+        h4 {
+            font-size: 24px;
+            text-transform: capitalize;
+            margin: 15px 0;
+        }
+    }
+}

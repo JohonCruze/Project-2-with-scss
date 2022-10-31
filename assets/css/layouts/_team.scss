@@ -1,0 +1,47 @@
+.team-area {
+  .single-team {
+    position: relative;
+    overflow: hidden;
+    &:hover {
+      .team-overlay {
+        visibility: visible;
+        bottom: 0;
+      }
+    }
+    img {
+      width: 100%;
+    }
+    .team-overlay {
+      position: absolute;
+      bottom: -130px;
+      left: 0;
+      text-align: center;
+      background-color: #333;
+      width: 100%;
+      padding: 20px;
+      visibility: hidden;
+      transition: 0.3s;
+      h4 {
+        text-transform: capitalize;
+        font-size: 20px;
+        color: #fff;
+        span {
+          display: block;
+          font-size: 16px;
+          margin-top: 5px;
+          text-transform: lowercase;
+          font-weight: 400;
+          margin-bottom: 20px;
+        }
+      }
+      a {
+        color: #fff;
+        margin: 0 5px;
+        transition: 0.3s;
+        &:hover {
+          color: tomato;
+        }
+      }
+    }
+  }
+}
