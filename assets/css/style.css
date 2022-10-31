@@ -462,17 +462,26 @@ h1, h2, h3, h4, h5, h6 {
   transform: translateX(-50%);
 }
 
-header.header-area {
+.header-area {
   padding: 20px 0;
   position: fixed;
-  z-index: 999;
+  z-index: 99;
   left: 0;
   right: 0;
+  transition: 0.3s ease;
 }
-header.header-area .sticky {
-  background-color: #fff;
+.header-area.sticky {
+  background-color: #fff !important;
+  padding: 15px 0;
+  border-bottom: 2px solid #f2f2f2;
 }
-header.header-area .logo a {
+.header-area.sticky a {
+  color: #333 !important;
+}
+.header-area.sticky a:hover {
+  color: #ff6347 !important;
+}
+.header-area .logo a {
   text-transform: uppercase;
   font-size: 24px;
   font-weight: 700;
@@ -481,7 +490,13 @@ header.header-area .logo a {
   border: 1px solid #fff;
   padding: 10px 10px;
 }
-header.header-area .menu ul li a {
+.header-area .menu ul li {
+  display: inline-block;
+}
+.header-area .menu ul li.active a {
+  color: #ff6347 !important;
+}
+.header-area .menu ul li a {
   display: block;
   color: #fff;
   font-size: 16px;
@@ -490,12 +505,14 @@ header.header-area .menu ul li a {
   font-weight: 600;
   transition: 0.3s;
 }
-header.header-area .menu ul li a:hover {
+.header-area .menu ul li a:hover {
   color: #ff6347;
 }
 
 .banner-area {
   height: 100vh;
+}
+.banner-area .banner-content {
   z-index: 2;
 }
 .banner-area .banner-content h1 {
@@ -991,7 +1008,7 @@ header.header-area .menu ul li a:hover {
   top: 100px;
   transform: translate(-50%, -50%);
   left: 50%;
-  background-color: #eee;
+  background-color: #5e5b5b;
 }
 .footer-area .top-footer-content h2 {
   font-size: 30px;

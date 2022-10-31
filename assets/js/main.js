@@ -6,6 +6,10 @@ $(document).ready(function () {
     }
   });
 
+  $('#nav').onePageNav({
+    currentClass: 'active',
+  });
+
   $('.video').magnificPopup({
     type: 'iframe'
   });
@@ -18,15 +22,18 @@ $(document).ready(function () {
     dots: true
   });
 
+  $('.ripple').ripples({
+    resulation: 1200,
+    dropRadius: 20,
+    perturbance: 0.01,
+  });
 });
 
-$(window).load(function(){
-  $(window).on('scroll', function(){
-    if($(window).scroolTop() > 50){
-      $('.header-area').addClass('sticky');
-    }
-    else{
-      $('.header-area').removeClass('sticky');
-    }
-  })
+$(window).on('scroll', function() {
+  if($(this).scrollTop() > 20){
+    $('.header-area').addClass('sticky');
+  }
+  else{
+    $('.header-area').removeClass('sticky');
+  }
 })
